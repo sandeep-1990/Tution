@@ -1,4 +1,4 @@
-package collectiontest;
+package list;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -8,10 +8,11 @@ public class ArrayListTest {
 
 	public static void main(String[] args) {
 		
-		ArrayList al = new ArrayList();
+		ArrayList<Integer> al = new ArrayList<Integer>();
 		al.add(10);
 		al.add(20);
 		al.add(15);
+		al.add(16);
 		
 		/*for(int i=0; i<al.size(); i++){
 			System.out.println(al.get(i));
@@ -32,15 +33,13 @@ public class ArrayListTest {
 			System.out.println(listIterator.next());
 		}*/
 	
-		ListIterator iterator= al.listIterator();
+		ListIterator<Integer> iterator= al.listIterator();
 	
 		while(iterator.hasNext()){
-			System.out.println(iterator.next());
+			int no = iterator.next();
+			System.out.println(no);
 		}
 	
-		while(iterator.hasPrevious()){
-			System.out.println(iterator.next());
-		}
 			
 		
 	}
