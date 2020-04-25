@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,20 +8,38 @@
 </head>
 <body>
 
+	<div>
+		<form action="StudentServlet" method="post">
+			
+			<table>
 
-	  <%! 
-	  	String n = null;
-	  	public String capName(String name){
-		  
-			return name.toUpperCase();  
-	  	}
-	  
-	  %>
-	
-		<%
-			n = capName("sandeep");
-		%>
-		
-		<%="Name : "+n%>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name"></td>
+
+				</tr>
+				<tr>
+					<td>Roll No</td>
+					<td><input type="text" name="rollNo"></td>
+
+				</tr>
+				<tr>
+					<td>Phone</td>
+					<td><input type="text" name="phone"></td>
+
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email"></td>
+
+				</tr>
+				<tr>
+					<td><input type="submit" value="Submit"></td>
+
+				</tr>
+			</table>
+		</form>
+	</div>
+
 </body>
 </html>

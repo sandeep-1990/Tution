@@ -393,7 +393,7 @@
 								
 								Collection vs Array
 								
-								Array : i) Homogenious/Type safe ii) fixed Size 
+								Array : i) Homogenious/Type safe ii) fixed Size iii) reduce type casting 
 								
 								Collection : i) Hitrogenious/ Not type safe 
 											ii) Not size issue
@@ -453,7 +453,7 @@
 											iii) Load Factor : nc = (cc*3/2)+1		
 											iv) RandomAccess, Serializable
 											v) insertion orer preserved
-								
+											vi) duplication allowed
 										NC = (10*3/2)+1 = 16
 												(16*3/2)+1 = 25
 										
@@ -502,7 +502,103 @@
 										i) Hitrogenious
 										ii) Legacy
 										iii) Serializable
+										iv) 
+										
 										 
+										
+										Set : 
+										
+										HashSet : 
+										
+										i) Hitrogenious
+										ii) Serializable
+										iii) insertion order not preserved
+										iv) duplication not allowed
+										
+										LinkedHashSet : 
+										
+										i) Hitrogenious
+										ii) Serializable
+										iii) duplication not allowed
+										iv) insertion order preserved
+										
+										SortedSet -> NavigableSet -> TreeSet
+										
+										
+										Map : 
+
+										i) key can't be duplicate
+										ii) value can be duplicate
+										key : value
+
+										i) put(Object key, Object value);
+										ii) putAll(Map);
+										
+										
+										
+										Generic : 
+										
+										<?>
+										
+										DB : 
+										
+										JSP : Java Server Pages
+										
+										Html vs Jsp
+										
+										i) Java code not allowed  i) We can write java code in jsp
+										ii) No need to strat server again and again ii) Same here
+										
+										9 implicit objects
+
+										i) out
+										ii) exception
+										iii) page
+										iv) request
+										v) response
+										vi) context
+										vii) session
+										viii) PageContext
+										ix) application
+										
+										
+										Jsp scripting elements : Client side tecnology
+										
+										i) scriplet tag  <% %>
+										ii) declaration  <%! %>
+										iii) expression <%= %>
+										
+										Life cycle of JSP:
+										
+										i) init
+										ii) Service
+										iii) destroy
+										
+										
+										Servlet : Server side technology 
+										
+										Life cycle of servlet : 
+										
+										i) init
+										ii) service
+										iii) destroy
+										iv) doGet
+										v) doPost
+	
+										
+										
+										
+
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
 										
 										
 										
