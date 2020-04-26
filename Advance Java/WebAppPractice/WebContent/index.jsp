@@ -7,8 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
+	
+	
 	<div>
+		<% 
+			String status = (String)request.getAttribute("status");
+			if(status != null){
+		%>
+		<%= status%>
+		<% 		
+			}
+		%>
 		<form action="StudentServlet" method="post">
 			
 			<table>

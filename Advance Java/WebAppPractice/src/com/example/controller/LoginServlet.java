@@ -8,22 +8,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.bean.Student;
 import com.example.business.StudentBusiness;
 import com.example.businessimpl.StudentBusinessImpl;
-import com.example.dao.StudentDao;
-import com.example.daoimpl.StudentDaoImpl;
 
 /**
- * Servlet implementation class StudentServlet
+ * Servlet implementation class LoginServlet
  */
-public class StudentServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public StudentServlet() {
+    public LoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,24 +38,24 @@ public class StudentServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Student student = new Student();
-		student.setName(request.getParameter("name"));
-		student.setRollNo(request.getParameter("rollNo"));
-		student.setPhoneNo(request.getParameter("phone"));
-		student.setEmailId(request.getParameter("email"));
+		String name = request.getParameter("name");
+		String pass = request.getParameter("password");
 		
-		StudentBusiness studentBusiness = new StudentBusinessImpl();
-		boolean b = studentBusiness.addStudent(student);
-		
+		StudentBusiness business = new StudentBusinessImpl();
+		boolean b = business.login(name, pass);
 		if(b){
 			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 			request.setAttribute("status", "success");
 			dispatcher.forward(request, response);
 		}else{
-			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-			request.setAttribute("status", "already exists");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+			request.setAttribute("status", "invalid user");
 			dispatcher.forward(request, response);
 		}
+		
+		
+		
+		
 	}
 
 }

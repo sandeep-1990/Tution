@@ -1,11 +1,11 @@
-package com.example.dao;
+package com.example.business;
 
 import java.util.List;
 
 import com.example.bean.Student;
 
-public interface StudentDao {
-
+public interface StudentBusiness {
+	
 	boolean addStudent(Student student);
 	
 	boolean updateStudent(Student student);
