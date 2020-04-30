@@ -584,6 +584,68 @@
 										iii) destroy
 										iv) doGet
 										v) doPost
+										
+										Spring Framework
+										
+										EJB =  Enterprise java beans -> heavy weight
+										Spring : ->  light weight
+										initial name : interface21 -> org.spring
+										winter -> -20 spring 
+										
+										
+										interface AA{
+											
+											
+										}
+										class A implements AA{
+											
+											
+										}
+										class B implements AA{
+											
+										}
+										
+										class C implements AA{
+											
+										}
+										
+										class XYZ{
+											AA aa;
+											
+											XYZ(AA aa){
+												this.aa = aa;
+												
+											}
+											
+										}
+										
+										Type of Spring container
+										
+										i) Basic Container : Bean Factory ->  Lazy Container
+										ii) advanced container : ApplicationContext -> Ealier/eager container
+										iii) MVC container   : 
+										
+										Spring Advantages
+										
+										Spring MVC Supports
+											1) From Backup Supprot
+											2) Controller
+												i) MultiAction Controller
+												ii) MultiForm Controller
+											3) Validation Support
+											4) I18N
+											5) Intercepters
+											6) ViewResolver
+											7) Exception Handling  
+										
+										
+										
+										
+										
+										
+										
+										
+										
 	
 										
 										
