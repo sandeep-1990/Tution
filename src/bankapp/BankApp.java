@@ -1,7 +1,5 @@
 package bankapp;
 
-import java.util.ArrayList;
-
 public class BankApp {
 
 	public static void main(String[] args) {
