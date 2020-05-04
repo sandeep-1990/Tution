@@ -1,21 +1,26 @@
 package co.in.bean;
 
-public class User {
+import java.io.Serializable;
 
+import com.google.gson.annotations.SerializedName;
+
+public class UserVo implements Serializable {
+
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
-	private  String name;
-	private String address;
-	private String phone;
+	@SerializedName(value = "name")
+	public String name;
+	@SerializedName(value = "address")
+	public String address;
 	
 	
-	public User() {
-		// TODO Auto-generated constructor stub
-	}
-	public User(String name,String address,String phone) {
+	
+	public UserVo(String name, String address) {
 		super();
 		this.name = name;
 		this.address = address;
-		this.phone = phone;
 	}
 	
 	public String getName() {
@@ -30,11 +35,6 @@ public class User {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+	
 	
 }
