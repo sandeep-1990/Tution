@@ -1,24 +1,22 @@
-package co.in.businessimpl;
+package co.in.serviceimpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import co.in.bean.User;
-import co.in.business.UserBusiness;
+import co.in.dao.UserDao;
 import co.in.service.UserService;
 
-@Component
-public class UserBusinessImpl implements UserBusiness{
+@Service
+public class UserServiceImpl implements UserService {
 
 	@Autowired
-	UserService userService;
-	
+	UserDao userDao;
 	
 	public void saveUser(User user) {
-		
-		userService.saveUser(user);
+		userDao.saveUser(user);
 	}
 
 	public User getUser(String rollNo) {
@@ -30,7 +28,5 @@ public class UserBusinessImpl implements UserBusiness{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	
 
 }

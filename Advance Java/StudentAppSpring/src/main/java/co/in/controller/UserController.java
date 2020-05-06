@@ -19,23 +19,22 @@ public class UserController {
 
 	@Autowired
 	UserBusiness userBusiness;
-	
-	@RequestMapping(value="/saveuser/{name}/{phone}/{address}", method=RequestMethod.GET, produces = "application/json" )
+
+	@RequestMapping(value = "/saveuser/{name}/{phone}/{address}", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	public String saveUser(@PathVariable String name, @PathVariable String phone, @PathVariable String address){
+	public String saveUser(@PathVariable String name, @PathVariable String phone, @PathVariable String address) {
 		JsonArray array = new JsonArray();
 		JsonObject jsonObject = new JsonObject();
-		try{
-			User user = new User(name,address,phone);
-			String status = userBusiness.saveUser(user);
-			jsonObject.addProperty("name", status);
+		try {
+			User user = new User(name, address, phone);
+			userBusiness.saveUser(user);
 			jsonObject.addProperty("msg", "Successfully saved");
 			array.add(jsonObject);
-		}catch (Exception e) {
-			jsonObject.addProperty("msg", "exception : "+e);
+		} catch (Exception e) {
+			jsonObject.addProperty("msg", "exception : " + e);
 			array.add(jsonObject);
 		}
 		return array.toString();
 	}
-	
+
 }

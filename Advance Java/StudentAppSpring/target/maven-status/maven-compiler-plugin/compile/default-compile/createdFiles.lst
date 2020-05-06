@@ -1,6 +1,10 @@
-co\in\businessimpl\UserBusinessImpl.class
 co\in\bean\User.class
+co\in\dao\UserDao.class
+co\in\springcrud\factory\HibernateConnectionFactory.class
+co\in\businessimpl\UserBusinessImpl.class
+co\in\daoimpl\UserDaoImpl.class
 co\in\controller\UserController.class
+co\in\service\UserService.class
 co\in\bean\UserVo.class
 co\in\business\UserBusiness.class
-co\in\controller\TeacherController.class
+co\in\serviceimpl\UserServiceImpl.class
