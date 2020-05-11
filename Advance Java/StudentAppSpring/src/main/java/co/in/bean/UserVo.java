@@ -2,26 +2,19 @@ package co.in.bean;
 
 import java.io.Serializable;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class UserVo implements Serializable {
+public class UserVo{
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-	@SerializedName(value = "name")
-	public String name;
-	@SerializedName(value = "address")
-	public String address;
-	
-	
-	
-	public UserVo(String name, String address) {
-		super();
-		this.name = name;
-		this.address = address;
-	}
+	@JsonProperty(value = "name")
+	private String name;
+	@JsonProperty(value = "address")
+	private String address;
+	@JsonProperty(value="phone")
+	private String phone;
 	
 	public String getName() {
 		return name;
@@ -35,6 +28,10 @@ public class UserVo implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 }
