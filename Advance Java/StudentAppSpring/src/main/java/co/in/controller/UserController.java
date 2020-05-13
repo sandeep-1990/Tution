@@ -28,8 +28,8 @@ public class UserController {
 		JsonArray array = new JsonArray();
 		JsonObject jsonObject = new JsonObject();
 		try {
-			User user = new User(name, address, phone);
-			userBusiness.saveUser(user);
+//			User user = new User(name, address, phone);
+//			userBusiness.saveUser(user);
 			jsonObject.addProperty("msg", "Successfully saved");
 			array.add(jsonObject);
 		} catch (Exception e) {
@@ -62,7 +62,9 @@ public class UserController {
 		JsonObject jsonObject = new JsonObject();
 		try {
 			System.out.println("inside register method");
-			jsonObject.addProperty("msg", userVo.getName());
+			User user = new User(userVo);
+			userBusiness.saveUser(user);
+			jsonObject.addProperty("msg", "Successfully Saved");
 			array.add(jsonObject);
 		} catch (Exception e) {
 			jsonObject.addProperty("msg", "exception : " + e);

@@ -1,7 +1,5 @@
 package co.in.bean;
 
-import java.io.Serializable;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserVo{
@@ -11,10 +9,10 @@ public class UserVo{
 	 */
 	@JsonProperty(value = "name")
 	private String name;
-	@JsonProperty(value = "address")
-	private String address;
 	@JsonProperty(value="phone")
 	private String phone;
+	@JsonProperty(value="address")
+	private Address address;
 	
 	public String getName() {
 		return name;
@@ -22,10 +20,10 @@ public class UserVo{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 	public String getPhone() {
