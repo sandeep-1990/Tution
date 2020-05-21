@@ -644,6 +644,14 @@
 										1.8
 										 symbol : ->
 										 
+										 Funtional Interface 
+										 
+										 Inner classes : -
+										 
+										 
+										 
+										 
+										 
 										 
 										
 										
